@@ -43,7 +43,7 @@ struct FrameworkDetailView: View {
             }
             
         }.padding()
-            .sheet(isPresented: $isShowingSafariView , content: {
+            .fullScreenCover(isPresented: $isShowingSafariView , content: {
                 SafariView(url: (URL(string: framework.urlString) ?? URL(string: "www.apple.com"))!)
             })
         
